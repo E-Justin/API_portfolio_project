@@ -35,9 +35,12 @@ def create():
 def show(portfolio_id:int):
     """ get all stocks in a given portfolio"""
     result = []
+    # query portfolio_stocks to find given portfolio_id
     portfolio_stocks = Portfolio_stocks.query.filter_by(portfolio_id = portfolio_id)
-    #ps = Portfolio_stocks.query.get_or_404(portfolio_id) #.query.filterby(portfolio_id = portfolio_id)
+    # iterate through each portfolio_stocks
     for stock in portfolio_stocks:
+        # append to result
         result.append(stock.serialize())
 
+    # return all stocks in given portfolio
     return jsonify(result)
