@@ -5,6 +5,7 @@ bp = Blueprint('portfolio_stocks', __name__, url_prefix = '/portfolio_stocks')
 
 @bp.route('', methods=['GET'])
 def index():
+    """ get everything from portfolio_stocks"""
     portfolio_stocks = Portfolio_stocks.query.all()
     result = []
     for ps in portfolio_stocks:
@@ -30,7 +31,13 @@ def create():
     db.session.commit()
     return(jsonify(ps.serialize()))
 
-@bp.route('/<portfolio_id>', methods = ['GET'])  # this one no work yet
+@bp.route('/<portfolio_id>', methods = ['GET']) 
 def show(portfolio_id:int):
-    ps = Portfolio_stocks.query.get_or_404(portfolio_id) #.query.filterby(portfolio_id = portfolio_id)
-    return jsonify(ps.serialize())
+    """ get all stocks in a given portfolio"""
+    result = []
+    portfolio_stocks = Portfolio_stocks.query.filter_by(portfolio_id = portfolio_id)
+    #ps = Portfolio_stocks.query.get_or_404(portfolio_id) #.query.filterby(portfolio_id = portfolio_id)
+    for stock in portfolio_stocks:
+        result.append(stock.serialize())
+
+    return jsonify(result)
