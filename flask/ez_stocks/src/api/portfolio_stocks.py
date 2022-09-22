@@ -32,5 +32,5 @@ def create():
 
 @bp.route('/<portfolio_id>', methods = ['GET'])  # this one no work yet
 def show(portfolio_id:int):
-    ps = Portfolio_stocks.query.get_or_404(portfolio_id)
+    ps = Portfolio_stocks.query.get_or_404(portfolio_id) #.query.filterby(portfolio_id = portfolio_id)
     return jsonify(ps.serialize())
