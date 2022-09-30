@@ -1,23 +1,4 @@
-# from src.stock_info import *
-# from .. stock_info import *
-# from stock_info import *
-#import stock_info
-# from stock_info import get_stock_info_by_symbol
-# above imports were attempted when test folder was in /src
-
-
-# from ..flask.ez_stocks.src.stock_info import *
-# from ..flask.ez_stocks.src import stock_info
-# the above imports were attempted when test folder was in portfolio_project folder
-
-#from ez_stocks.src.stock_info import *
-# from ez_stocks.src import stock_info
-# the above imports were attempted when test folder was in flask folder
-
 from src.stock_info import *
-# from src import stock_info
-# the above imports were attempted when test folder was in ez_stocks folder
-
 
 
 def test_get_stock_info_correct_name_from_stock_symbol_DIS():
