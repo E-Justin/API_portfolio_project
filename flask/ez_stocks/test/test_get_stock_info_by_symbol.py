@@ -29,5 +29,11 @@ def test_get_stock_info_correct_name_from_stock_symbol_MSFT():
 
     assert 'Microsoft' in stock_name
     
+def test_get_stock_info_correct_name_from_stock_symbol_UBER():
+
+    stock_info = get_stock_info_by_symbol('UBER')  # returns alls stock info as a list
+    stock_name = stock_info[0]  # first item == stock name
+
+    assert 'Uber' in stock_name
 
 
