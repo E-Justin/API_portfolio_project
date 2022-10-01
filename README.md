@@ -1,7 +1,7 @@
 # API_portfolio_project
 
-Backend API for a stock management application.
-I used Python, Flask, and pgAdmin.
+Backend API for a stock management application using Python, Flask, and pgAdmin.
+
 
 # Python libraries used:
 * flask
