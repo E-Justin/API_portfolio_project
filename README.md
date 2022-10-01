@@ -1,6 +1,23 @@
 # API_portfolio_project
 
-Endpoints:  
+Backend API for a stock management application.
+I used Python, Flask, and pgAdmin.
+
+# Python libraries used:
+* flask
+* SQLAlchemy
+* BeautifulSoup
+* requests
+* datetime
+* hashlib
+* secrets
+
+# Testing done with:
+* pytest
+* Insomnia
+
+
+# Endpoints:  
 
 /users  
 GET : Get single user's information  : /users/id  
