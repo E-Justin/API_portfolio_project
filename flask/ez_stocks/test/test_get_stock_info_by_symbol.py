@@ -36,4 +36,25 @@ def test_get_stock_info_correct_name_from_stock_symbol_UBER():
 
     assert 'Uber' in stock_name
 
+def test_get_stock_info_correct_name_from_stock_symbol_LAC():
+
+    stock_info = get_stock_info_by_symbol('LAC')  # returns alls stock info as a list
+    stock_name = stock_info[0]  # first item == stock name
+
+    assert 'Lithium Americas Corp' in stock_name
+
+def test_get_stock_info_correct_name_from_stock_symbol_LEVI():
+
+    stock_info = get_stock_info_by_symbol('LEVI')  # returns alls stock info as a list
+    stock_name = stock_info[0]  # first item == stock name
+
+    assert 'Levi' in stock_name
+
+def test_get_stock_info_correct_name_from_stock_symbol_NVDA():
+
+    stock_info = get_stock_info_by_symbol('NVDA')  # returns alls stock info as a list
+    stock_name = stock_info[0]  # first item == stock name
+
+    assert 'NVIDIA Corp' in stock_name
+
 
